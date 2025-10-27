@@ -1,0 +1,728 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        @font-face{
+           font-family: 'vazirmatn';
+           src: url(font/vazirmatn.ttf);
+         }
+        
+        body {
+            font-family: 'vazirmatn';
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* هدر */
+        header {
+            background-color: white;
+            color: #000000;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            padding: 5px 10px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        nav ul li a:hover {
+            color: #1e3932;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .find-store {
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        
+        .auth-buttons a {
+            margin-left: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .sign-in {
+            border: 1px solid #000;
+        }
+        
+        .join-now {
+            background-color: #000;
+            color: white;
+        }
+        /* استایل مودال عضویت */
+.auth-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.auth-modal-content {
+    background-color: #D27938; /* رنگ نارنجی مثل کاور */
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.close-modal {
+    color: white;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #1e3932;
+}
+
+.auth-modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #1e3932;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #1e3932;
+}
+/* استایل دکمه ثبت نام در مودال ورود */
+.register-btn {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border: 2px solid #1e3932;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #1e3932;
+    color: white;
+}
+
+        
+ /* استایل اسلایدر هیرو */
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-slider {
+    position: relative;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* بک‌گراند برای هر اسلاید */
+.slide:nth-child(1) {
+    background: linear-gradient(rgba(210, 120, 56, 0.788), rgba(212, 129, 61, 0.859)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+}
+
+.slide:nth-child(2) {
+    background: linear-gradient(rgba(210, 120, 56, 0.788), rgba(212, 129, 61, 0.859)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1161&q=80');
+}
+
+.slide:nth-child(3) {
+    background: linear-gradient(rgba(210, 120, 56, 0.788), rgba(212, 129, 61, 0.859)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1147&q=80');
+}
+
+/* دکمه‌های کنترل اسلایدر - بدون کادر */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 25px;
+    z-index: 10;
+}
+
+.slider-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #1e3932;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.slider-btn:hover {
+    background: #1e3932;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* دات‌های نشانگر - مینیمال */
+.slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #1e3932;
+    transform: scale(1.3);
+}
+
+.dot:hover {
+    background: #1e3932;
+    transform: scale(1.2);
+}
+
+/* دکمه اصلی کاور - مینیمال */
+.hero-content .btn {
+    background: #1e3932;
+    color: white;
+    padding: 15px 35px;
+    border: 2px solid #1e3932;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 20; 
+}
+
+.hero-content .btn:hover {
+    background: transparent;
+    color: #1e3932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+
+/* تغییر رنگ نوشته‌های هیرو به سبز */
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1e3932 !important; /* سبز اصلی سایت */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #1e3932 !important; /* سبز اصلی سایت */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+
+
+/* تضمین می‌کنیم که رنگ سبز در حالت‌های مختلف حفظ بشه */
+.slide.active .hero-content h1,
+.slide.active .hero-content p {
+    color: #1e3932 !important;
+}
+        
+        /* بخش‌های تبلیغاتی */
+        .promo-section {
+            padding: 80px 0;
+        }
+        
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .promo-card {
+            background-color: #f1f8f5;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .promo-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .promo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .promo-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .promo-content h2 {
+            color: #1e3932;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .promo-content p {
+            color: #2b2b2b;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+        
+        .promo-content .btn {
+            align-self: flex-start;
+                background: #1e3932;
+    color: white;
+    padding: 15px 35px;
+    border: 2px solid #1e3932;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+        }
+        .promo-content .btn:hover {
+    background: transparent;
+    color: #1e3932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* ریسپانسیو برای دکمه */
+@media (max-width: 768px) {
+    .promo-content .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-content .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+        
+        /* بخش محصولات ویژه */
+        .featured-section {
+            padding: 80px 0;
+            background-color: #d4e9e2;
+            text-align: center;
+        }
+        
+        .featured-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .featured-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e3932;
+        }
+        
+        .featured-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #2b2b2b;
+            line-height: 1.7;
+        }
+    
+.featured-section .btn {
+    background: #1e3932;
+    color: white;
+    padding: 15px 35px;
+    border: 2px solid #1e3932;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.featured-section .btn:hover {
+    background: transparent;
+    color: #1e3932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* ریسپانسیو برای دکمه */
+@media (max-width: 768px) {
+    .featured-section .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-section .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+        
+        /* بخش هنری */
+        .art-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f2f0eb, #d4e9e2);
+            text-align: center;
+        }
+        
+        .art-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .art-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #1e3932;
+        }
+        
+        .art-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #2b2b2b;
+            line-height: 1.8;
+        }
+        
+        .artist-name {
+            font-style: italic;
+            margin-top: 15px;
+            color: #6c6c6c;
+        }
+        
+        /* بخش شرایط */
+        .terms {
+            background-color: #f7f7f7;
+            padding: 30px 0;
+            font-size: 0.85rem;
+            color: #6c6c6c;
+            line-height: 1.6;
+        }
+        
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* فوتر */
+        footer {
+            background-color: #1e3932;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #cba258;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #cba258;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .promo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /*پنل دسترسی*/
+        .accessibility-panel {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .accessibility-btn {
+            background: #1e3932;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .accessibility-btn:hover {
+            background: #1e3932;
+        }
+        
+        /*  کنتراست بالا */
+        .high-contrast {
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+          
+        .high-contrast .btn {
+            background-color: #ffff00 !important;
+            color: #000 !important;
+            border: 2px solid #ffff00 !important;
+        }
+          .high-contrast .btn:hover {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast .promo-card,
+        .high-contrast .featured-section,
+        .high-contrast .art-section,
+        .high-contrast .terms {
+            background-color: #000 !important;
+            color: #fff !important;
+            border: 2px solid #ffff00 !important;
+        }
+        .high-contrast a,
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast p,
+        .high-contrast li {
+            color: #ffff00 !important;
+        }
+
+        
+        /*    اندازه فونت */
+        .large-text {
+            font-size: 120% !important;
+        }
+        
+        .larger-text {
+            font-size: 150% !important;
+        }
+   
+        .larger-text h1 {
+            font-size: 4.5rem !important;
+        }
+        
+        .larger-text h2 {
+            font-size: 3.2rem !important;
+        }
+        
+        .larger-text p, 
+        .larger-text a, 
+        .larger-text li {
+            font-size: 1.6rem !important;
+        }
+         .large-text h1 {
+            font-size: 3.8rem !important;
+        }
+        
+        .large-text h2 {
+            font-size: 2.8rem !important;
+        }
+        
+        .large-text p, 
+        .large-text a, 
+        .large-text li {
+            font-size: 1.3rem !important;
+        }
+   

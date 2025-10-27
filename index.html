@@ -1,0 +1,250 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grean Leaf </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+               <div class="logo">
+                        <img src="img/Green tea logo design (1).jpg" alt="Green Cafe Logo" style="height: 100px; width: 100px;">
+</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">صفحه ی اصلی</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                       <li><a href="call.html#map">تماس با ما</a></li>
+                        <li><a href="about us.html"> درباره ی ما</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                 <a href="call.html#map" class="find-store"> 
+                    <i class="fas fa-map-marker-alt"></i> یافتن شعب
+                </a>
+                    <div class="auth-buttons">
+                     <a href="#" class="sign-in" id="login-btn">ورود</a>
+                     <a href="#" class="join-now" id="register-btn">عضویت</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- مودال عضویت -->
+<div id="register-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="register-modal">&times;</span>
+        <h2>عضویت در   Grean Leaf </h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="reg-username">نام کاربری:</label>
+                <input type="text" id="reg-username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="reg-password">رمز ورود:</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthdate">تاریخ تولد:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">شماره تماس:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="membership-date">تاریخ شروع عضویت:</label>
+                <input type="date" id="membership-date" name="membership-date" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ثبت عضویت</button>
+        </form>
+    </div>
+</div>
+<!-- مودال ورود -->
+<div id="login-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="login-modal">&times;</span>
+        <h2>ورود به  Grean Leaf</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">رمز ورود:</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ورود</button>
+            <button type="button" class="btn register-btn" id="go-to-register">ثبت نام</button>
+        </form>
+    </div>
+</div>
+<!-- بخش هیرو با اسلایدر -->
+<section class="hero">
+    <div class="hero-slider">
+        <!-- اسلاید 1 -->
+        <div class="slide active">
+            <div class="hero-content">
+                <h1>فصل پاییز همین حالا آغاز شد</h1>
+                <p>طعم‌های پاییزی ما به طور رسمی اینجا هستند. زمان برای همه چیز کدو تنبل و پیکان، از جمله Cortado Pekan Oatmilk جدید.</p>
+                <a href="menu.html" class="btn">مشاهده منو</a>
+            </div>
+        </div>
+        
+        <!-- اسلاید 2 -->
+        <div class="slide">
+            <div class="hero-content">
+                <h1>قهوه‌های ویژه گرین کافه</h1>
+                <p>تجربه‌ای منحصر به فرد از طعم واقعی قهوه با دانه‌های انتخاب شده و رست تازه.</p>
+                <a href="menu.html" class="btn">سفارش آنلاین</a>
+            </div>
+        </div>
+        
+        <!-- اسلاید 3 -->
+        <div class="slide">
+            <div class="hero-content">
+                <h1>محیطی آرام برای لحظات شما</h1>
+                <p>در فضایی دنج و مدرن، بهترین لحظات را با عزیزانتان سپری کنید.</p>
+                <a href="call.html" class="btn">رزرو میز</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- دکمه‌های کنترل اسلایدر -->
+    <div class="slider-controls">
+        <button class="slider-btn prev-btn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="slider-btn next-btn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+    
+    <!-- دات‌های نشانگر -->
+    <div class="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+    </div>
+</section>
+
+    <!-- بخش محصولات ویژه -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-content">
+                <h2>آماده. تنظیم. PSL.</h2>
+                <p>انتظار به پایان رسید: Pumpkin Spice Latte نمادین اینجاست. با کدو تنبل واقعی، اسپرسو Signature  Grean Leaf و ادویه‌های دنج، این چیزی است که پاییز را می‌سازد.</p>
+                <p>داغ، یخی یا مخلوط شده لذت ببرید.</p>
+                <a href="menu.html" class="btn">PSL را الان سفارش دهید</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش‌های تبلیغاتی -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Free Drink">
+                    </div>
+                    <div class="promo-content">
+                        <h2>نوشیدنی رایگان، خوشآمدگویی گرم</h2>
+                        <p>اجازه دهید روز شما را با یک نوشیدنی رایگان دست ساز بسازیم. فقط عضو شوید و در طول هفته اول خود یک خرید واجد شرایط انجام دهید.*</p>
+                        <a href="#" class="btn join-now-btn">اکنون بپیوندید</a>
+                    </div>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="PSL Fans">
+                    </div>
+                    <div class="promo-content">
+                        <h2>برای طرفداران PSL</h2>
+                        <p>فصل Pumpkin Spice Latte را با ارسال یک کارت هدیه Starbucks جشن بگیرید.</p>
+                        <a href="#" class="btn">ارسال کارت هدیه</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش هنری -->
+    <section class="art-section">
+        <div class="container">
+            <div class="art-content">
+                <h2>مجموعه جدید افسونگر ما</h2>
+                <p>هنرمند آمریکایی Mike Willcox با نمادگرایی جذاب Art Deco از مناطق رشد قهوه تجلیل می‌کند. برای مدت زمان محدود.</p>
+                <p class="artist-name">WILL COX STARBUCKS</p>
+                <a href="#" class="btn">بیشتر بدانید</a>
+            </div>
+        </div>
+    </section>
+        <!-- پنل کنترل دسترسی -->
+    <div class="accessibility-panel">
+        <button class="accessibility-btn" id="contrast-toggle" title="تغییر کنتراست">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button class="accessibility-btn" id="font-increase" title="افزایش اندازه فونت">
+            <i class="fas fa-text-height"></i>+
+        </button>
+        <button class="accessibility-btn" id="font-decrease" title="کاهش اندازه فونت">
+            <i class="fas fa-text-height"></i>-
+        </button>
+        <button class="accessibility-btn" id="reset-accessibility" title="بازنشانی تنظیمات">
+            <i class="fas fa-undo"></i>
+        </button>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره ما</h3>
+                    <ul>
+                        <li><a href="#">تاریخچه ما</a></li>
+                        <li><a href="#">مسئولیت شرکت</a></li>
+                        <li><a href="#">فرصت‌های شغلی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>پشتیبانی مشتری</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">بازخورد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>ارتباط با ما</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023  Grean Leaf Coffee Company. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+ <script src="index.js"></script>
+</body>
+</html>

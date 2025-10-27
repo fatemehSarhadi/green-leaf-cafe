@@ -1,0 +1,597 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        @font-face{
+           font-family: 'vazirmatn';
+           src: url(font/vazirmatn.ttf);
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            font-family: 'vazirmatn';
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* استایل پنل کنترل دسترسی */
+        .accessibility-panel {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .accessibility-btn {
+            background: #1e3932;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .accessibility-btn:hover {
+            background: #1e3932;
+        }
+        
+        /* استایل‌های مربوط به کنتراست بالا */
+        .high-contrast {
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+        
+        .high-contrast header,
+        .high-contrast footer,
+        .high-contrast .about-card,
+        .high-contrast .about-hero,
+        .high-contrast .mission-section,
+        .high-contrast .timeline-item,
+        .high-contrast .values-section {
+            background-color: #000 !important;
+            color: #fff !important;
+            border: 2px solid #ffff00 !important;
+        }
+        
+        .high-contrast a,
+        .high-contrast h1,
+        .high-contrast h2,
+        .high-contrast h3,
+        .high-contrast p,
+        .high-contrast li,
+        .high-contrast .about-text,
+        .high-contrast .mission-text,
+        .high-contrast .timeline-content,
+        .high-contrast .value-title {
+            color: #ffff00 !important;
+        }
+        
+        .high-contrast .btn {
+            background-color: #ffff00 !important;
+            color: #000 !important;
+            border: 2px solid #ffff00 !important;
+        }
+        
+        .high-contrast .btn:hover {
+            background-color: #000 !important;
+            color: #ffff00 !important;
+        }
+        
+        /* استایل‌های مربوط به اندازه فونت */
+        .large-text {
+            font-size: 120% !important;
+        }
+        
+        .large-text h1 {
+            font-size: 3.8rem !important;
+        }
+        
+        .large-text h2 {
+            font-size: 2.8rem !important;
+        }
+        
+        .large-text h3 {
+            font-size: 2.2rem !important;
+        }
+        
+        .large-text p, 
+        .large-text a, 
+        .large-text li {
+            font-size: 1.3rem !important;
+        }
+        
+        .larger-text {
+            font-size: 150% !important;
+        }
+        
+        .larger-text h1 {
+            font-size: 4.5rem !important;
+        }
+        
+        .larger-text h2 {
+            font-size: 3.2rem !important;
+        }
+        
+        .larger-text h3 {
+            font-size: 2.6rem !important;
+        }
+        
+        .larger-text p, 
+        .larger-text a, 
+        .larger-text li {
+            font-size: 1.6rem !important;
+        }
+        
+        /* HEADER */
+        header {
+            background-color: white;
+            color: #000000;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            padding: 5px 10px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        nav ul li a:hover {
+            color: #1e3932;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .find-store {
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        
+        .auth-buttons a {
+            margin-left: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .sign-in {
+            border: 1px solid #000;
+        }
+        
+        .join-now {
+            background-color: #000;
+            color: white;
+        }
+               /* استایل مودال عضویت */
+.auth-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.auth-modal-content {
+    background-color: #D27938; /* رنگ نارنجی مثل کاور */
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.close-modal {
+    color: white;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #1e3932;
+}
+
+.auth-modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #1e3932;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #1e3932;
+}
+/* استایل دکمه ثبت نام در مودال ورود */
+.register-btn {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border: 2px solid #1e3932;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #1e3932;
+    color: white;
+}
+        
+        /* بخش هیرو درباره ما */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        
+        .about-hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* بخش داستان ما */
+        .story-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1e3932;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            color: #2b2b2b;
+            line-height: 1.8;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e3932;
+        }
+        
+        /* بخش مأموریت و چشم‌انداز */
+        .mission-section {
+            background-color: #d4e9e2;
+            padding: 80px 0;
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .mission-text {
+            color: #2b2b2b;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .mission-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .mission-icon {
+            font-size: 2.5rem;
+            color: #1e3932;
+            margin-bottom: 20px;
+        }
+        
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1e3932;
+        }
+        
+        
+        /* بخش ارزش‌ها */
+        .values-section {
+            background-color: #f1f8f5;
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: #1e3932;
+            margin-bottom: 20px;
+        }
+        
+        .value-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1e3932;
+        }
+        
+        /* بخش آمار و ارقام */
+        .stats-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1e3932;
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            color: #2b2b2b;
+            font-weight: 600;
+        }
+        
+        /* فوتر */
+        footer {
+            background-color: #1e3932;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #cba258;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #cba258;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ریسپانسیو */
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+            }
+            
+            .about-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .accessibility-panel {
+                top: 70px;
+                flex-direction: row;
+                border-radius: 0 0 8px 8px;
+            }
+            
+            .mission-cards,
+            .values-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }

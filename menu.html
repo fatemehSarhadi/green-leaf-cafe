@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grean Leaf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    </head>
+<body>
+</head>
+<body>
+    <!-- پنل کنترل دسترسی -->
+    <div class="accessibility-panel">
+        <button class="accessibility-btn" id="contrast-toggle" title="تغییر کنتراست">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button class="accessibility-btn" id="font-increase" title="افزایش اندازه فونت">
+            <i class="fas fa-text-height"></i>+
+        </button>
+        <button class="accessibility-btn" id="font-decrease" title="کاهش اندازه فونت">
+            <i class="fas fa-text-height"></i>-
+        </button>
+        <button class="accessibility-btn" id="reset-accessibility" title="بازنشانی تنظیمات">
+            <i class="fas fa-undo"></i>
+        </button>
+    </div>
+
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/Green tea logo design (1).jpg" alt="Starbucks Logo" style="height: 100px; width: 100px;">
+                </div>
+                <nav>
+                    <ul>
+                       <li><a href="index.html">صفحه ی اصلی</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                        <li><a href="call.html">تماس با ما</a></li>
+                        <li><a href="about us.html"> درباره ی ما</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                 <a href="call.html#map" class="find-store"> 
+                    <i class="fas fa-map-marker-alt"></i> یافتن شعب
+                </a>
+                        <div class="auth-buttons">
+                     <a href="#" class="sign-in" id="login-btn">ورود</a>
+                     <a href="#" class="join-now" id="register-btn">عضویت</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+     <!-- مودال عضویت -->
+<div id="register-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="register-modal">&times;</span>
+        <h2>عضویت در  Grean Leaf</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="reg-username">نام کاربری:</label>
+                <input type="text" id="reg-username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="reg-password">رمز ورود:</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthdate">تاریخ تولد:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">شماره تماس:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="membership-date">تاریخ شروع عضویت:</label>
+                <input type="date" id="membership-date" name="membership-date" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ثبت عضویت</button>
+        </form>
+    </div>
+</div>
+<!-- مودال ورود -->
+<div id="login-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="login-modal">&times;</span>
+        <h2>ورود به  Grean Leaf</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">رمز ورود:</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ورود</button>
+            <button type="button" class="btn register-btn" id="go-to-register">ثبت نام</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- بخش هیرو منو -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1>منوی  Grean Leaf</h1>
+                <p>کشف کنید که چه طعم‌های فوق‌العاده‌ای در انتظار شماست</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- دسته‌بندی‌های منو -->
+    <div class="container">
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">همه</button>
+            <button class="category-btn" data-category="coffee">قهوه</button>
+            <button class="category-btn" data-category="cold">نوشیدنی سرد</button>
+            <button class="category-btn" data-category="food">غذا و اسنک</button>
+            <button class="category-btn" data-category="dessert">دسر</button>
+        </div>
+
+        <!-- آیتم‌های منو -->
+        <div class="menu-container">
+            <!-- قهوه -->
+            <div class="menu-item" data-category="coffee" data-name="لاته" data-price="45000" data-image="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" data-description="اسپرسو با شیر بخارپز شده و لایه نازکی از فوم شیر">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="لاته">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>لاته</h3>
+                        <span class="price">45,000 تومان</span>
+                    </div>
+                    <p>اسپرسو با شیر بخارپز شده و لایه نازکی از فوم شیر</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="coffee" data-name="کاپوچینو" data-price="42000" data-image="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" data-description="اسپرسو با مقدار مساوی شیر و فوم شیر">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="کاپوچینو">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>کاپوچینو</h3>
+                        <span class="price">42,000 تومان</span>
+                    </div>
+                    <p>اسپرسو با مقدار مساوی شیر و فوم شیر</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="coffee" data-name="اسپرسو" data-price="35000" data-image="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" data-description="قهوه غلیظ و پرعطر با طعمی قوی">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="اسپرسو">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>اسپرسو</h3>
+                        <span class="price">35,000 تومان</span>
+                    </div>
+                    <p>قهوه غلیظ و پرعطر با طعمی قوی</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <!-- نوشیدنی سرد -->
+            <div class="menu-item" data-category="cold" data-name="فراپوچینو" data-price="55000" data-image="https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" data-description="نوشیدنی سرد و خامه‌ای با قهوه، شیر و یخ">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="فراپوچینو">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>فراپوچینو</h3>
+                        <span class="price">55,000 تومان</span>
+                    </div>
+                    <p>نوشیدنی سرد و خامه‌ای با قهوه، شیر و یخ</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="cold" data-name="آیس لته" data-price="48000" data-image="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-description="لاته سرد شده با یخ و شیر">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="آیس لته">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>آیس لته</h3>
+                        <span class="price">48,000 تومان</span>
+                    </div>
+                    <p>لاته سرد شده با یخ و شیر</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="cold" data-name="لیموناد توت فرنگی" data-price="40000" data-image="https://images.unsplash.com/photo-1626645735466-3c6d9bac3a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" data-description="لیموناد طراوت‌بخش با طعم توت فرنگی">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1626645735466-3c6d9bac3a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="لیموناد">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>لیموناد توت فرنگی</h3>
+                        <span class="price">40,000 تومان</span>
+                    </div>
+                    <p>لیموناد طراوت‌بخش با طعم توت فرنگی</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+            <!-- دسر -->
+            <div class="menu-item" data-category="dessert" data-name="کیک پوند شکلاتی" data-price="52000" data-image="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-description="کیک غنی شکلاتی با گاناش رویه">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="کیک">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>کیک پوند شکلاتی</h3>
+                        <span class="price">52,000 تومان</span>
+                    </div>
+                    <p>کیک غنی شکلاتی با گاناش رویه</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="dessert" data-name="مافین بلوبری" data-price="38000" data-image="https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" data-description="مافین شیرین با بلوبری تازه و رویه کرانچی">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="مافین">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h3>مافین بلوبری</h3>
+                        <span class="price">38,000 تومان</span>
+                    </div>
+                    <p>مافین شیرین با بلوبری تازه و رویه کرانچی</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال محصول -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-image">
+                <img id="modal-img" src="" alt="Product Image">
+            </div>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <p class="modal-description" id="modal-description"></p>
+            <div class="modal-price" id="modal-price"></div>
+            
+            <div class="quantity-selector">
+                <button class="quantity-btn" id="decrease">-</button>
+                <span class="quantity-text" id="quantity">1</span>
+                <button class="quantity-btn" id="increase">+</button>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="add-to-cart-modal" id="add-to-cart-modal">
+                    <i class="fas fa-shopping-cart"></i> افزودن به سبد
+                </button>
+                <button class="buy-now" id="buy-now">خرید now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال پرداخت -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="checkout-title">تکمیل خرید</h2>
+            
+            <div class="price-details">
+                <div class="price-detail">
+                    <span>قیمت اولیه:</span>
+                    <span id="checkout-base-price">0 تومان</span>
+                </div>
+                <div class="price-detail">
+                    <span>تخفیف:</span>
+                    <span id="checkout-discount">0 تومان</span>
+                </div>
+                <div class="price-detail">
+                    <span>قیمت نهایی:</span>
+                    <span id="checkout-total-price">0 تومان</span>
+                </div>
+            </div>
+            
+            <div class="discount-section">
+                <input type="text" class="discount-input" id="discount-code" placeholder="کد تخفیف را وارد کنید">
+                <div class="error-message" id="discount-error">کد تخفیف معتبر نیست</div>
+                <button class="apply-discount" id="apply-discount">اعمال تخفیف</button>
+            </div>
+            
+            <div class="checkout-buttons">
+                <button class="checkout-btn cancel-checkout" id="cancel-checkout">انصراف</button>
+                <button class="checkout-btn confirm-purchase" id="confirm-purchase">تأیید خرید</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره ما</h3>
+                    <ul>
+                        <li><a href="#">تاریخچه ما</a></li>
+                        <li><a href="#">مسئولیت شرکت</a></li>
+                        <li><a href="#">فرصت‌های شغلی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>پشتیبانی مشتری</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">بازخورد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>ارتباط با ما</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023  Grean Leaf Coffee Company. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+    </body>
+</html>

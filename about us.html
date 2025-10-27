@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grean Leaf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="about us.css">
+    </head>
+<body>
+    <!-- پنل کنترل دسترسی -->
+    <div class="accessibility-panel">
+        <button class="accessibility-btn" id="contrast-toggle" title="تغییر کنتراست">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button class="accessibility-btn" id="font-increase" title="افزایش اندازه فونت">
+            <i class="fas fa-text-height"></i>+
+        </button>
+        <button class="accessibility-btn" id="font-decrease" title="کاهش اندازه فونت">
+            <i class="fas fa-text-height"></i>-
+        </button>
+        <button class="accessibility-btn" id="reset-accessibility" title="بازنشانی تنظیمات">
+            <i class="fas fa-undo"></i>
+        </button>
+    </div>
+
+    <!-- هدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/Green tea logo design (1).jpg" alt="Starbucks Logo" style="height: 100px; width: 100px;">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">صفحه ی اصلی</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                        <li><a href="call.html">تماس با ما</a></li>
+                        <li><a href="about us.html"> درباره ی ما</a></li>
+                    </ul>
+                </nav>
+               <div class="header-actions">
+                 <a href="call.html#map" class="find-store"> 
+                    <i class="fas fa-map-marker-alt"></i> یافتن شعب
+                </a>
+                         <div class="auth-buttons">
+                     <a href="#" class="sign-in" id="login-btn">ورود</a>
+                     <a href="#" class="join-now" id="register-btn">عضویت</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+     <!-- مودال عضویت -->
+<div id="register-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="register-modal">&times;</span>
+        <h2>عضویت در  Grean Leaf</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="reg-username">نام کاربری:</label>
+                <input type="text" id="reg-username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="reg-password">رمز ورود:</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthdate">تاریخ تولد:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">شماره تماس:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="membership-date">تاریخ شروع عضویت:</label>
+                <input type="date" id="membership-date" name="membership-date" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ثبت عضویت</button>
+        </form>
+    </div>
+</div>
+<!-- مودال ورود -->
+<div id="login-modal" class="auth-modal">
+    <div class="auth-modal-content">
+        <span class="close-modal" data-modal="login-modal">&times;</span>
+        <h2>ورود به  Grean Leaf</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">نام کاربری:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">رمز ورود:</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">ورود</button>
+            <button type="button" class="btn register-btn" id="go-to-register">ثبت نام</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- بخش هیرو درباره ما -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>داستان  Grean Leaf</h1>
+                <p>از یک فروشگاه کوچک قهوه تا تبدیل شدن به یکی از شناخته‌شده ترین برندهای قهوه در جهان</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش داستان ما -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">داستان ما</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="تاریخچه استارباکس">
+                </div>
+                <div class="about-text">
+                    <h3>از سال 1971 تاکنون</h3>
+                    <p> Grean Leaf در سال 1971 در سیاتل، واشنگتن تأسیس شد. نام شرکت از اولین رمان کلاسیک آمریکایی «موبی دیک» گرفته شده است. سه شریک بنیانگذار - جری بالدوین، زو سیگل و گوردون باکر - که همگی معلمان انگلیسی بودند - عشق مشترکی به قهوه و چای داشتند و تصمیم گرفتند کسب‌وکار خود را راه‌اندازی کنند.</p>
+                    <p>اولین فروشگاه  Grean Leaf در پیونیک مارکت سیاتل واقع شده بود و تنها قهوه بو داده شده تازه، چای و ادویه را از سراسر جهان برای خانه و Brewing فروش می‌کرد. نام Starbucks Coffee از همان ابتدا برند را با کیفیت بالا و تجربه ممتاز مرتبط کرد.</p>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>انقلاب قهوه</h3>
+                    <p>در سال 1981، هاوارد شولتز، معاون فروش و بازاریابی شرکت هامرپلاست، متوجه شد که این فروشگاه کوچک قهوه، دستگاه‌های قهوه ساز بیشتری از هر فروشگاه دیگری در نیویورک خریداری کرده است. پس از ملاقات با بنیانگذاران، شولتز به استارباکس پیوست.</p>
+                    <p>سفر به ایتالیا، شولتز را با فرهنگ کافه‌های ایتالیایی آشنا کرد و او دید که چگونه قهوه‌خانه‌ها مرکز اجتماعی جامعه هستند. او این ایده را به سیاتل آورد و در سال 1984، اولین کافه ایل جورناله را راه اندازی کرد که در آن قهوه اسپرسو سرو می شد.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558640476-437a2b9438f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1155&q=80" alt="انقلاب قهوه">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش مأموریت و چشم‌انداز -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <h2 class="section-title">مأموریت و چشم‌انداز ما</h2>
+                <p class="mission-text">مأموریت ما الهام بخشیدن و تغذیه روح انسان است - یک نفر، یک فنجان و یک محله در یک زمان.</p>
+                
+                <div class="mission-cards">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>قهوه با کیفیت</h3>
+                        <p>ما به دنبال بهترین دانه های قهوه در جهان هستیم و آنها را با وجدان برشته می کنیم.</p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>همکاران ما</h3>
+                        <p>ما همکاران خود را با احترام و کرامت رفتار می کنیم و ارزش های مشترک را جشن می گیریم.</p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>فروشگاه های ما</h3>
+                        <p>مکانی برای استراحت، مکانی برای ملاقات دوستان، مکانی برای یافتن احساس تعلق.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- بخش ارزش‌ها -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">ارزش‌های ما</h2>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-title">اشتیاق</h3>
+                    <p>ما با عشق قهوه درست می کنیم و به کیفیت و جزئیات توجه داریم.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">صداقت</h3>
+                    <p>ما با شفافیت عمل می کنیم و مسئولیت اقدامات خود را بر عهده می گیریم.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">اجتماع</h3>
+                    <p>ما در ایجاد جامعه‌ای که به آن خدمت می‌کنیم مشارکت می‌کنیم.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-title">پایداری</h3>
+                    <p>ما متعهد به انجام کسب و کار به روشی سازگار با محیط زیست و مسئولانه هستیم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش آمار و ارقام -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title"> Grean Leaf در یک نگاه</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">32,000+</div>
+                    <div class="stat-text">فروشگاه در سراسر جهان</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-text">کشورهای فعال</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">350,000+</div>
+                    <div class="stat-text">همکار در سراسر جهان</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">سال تجربه</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>درباره ما</h3>
+                    <ul>
+                        <li><a href="#">تاریخچه ما</a></li>
+                        <li><a href="#">مسئولیت شرکت</a></li>
+                        <li><a href="#">فرصت‌های شغلی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>پشتیبانی مشتری</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">بازخورد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>ارتباط با ما</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023  Grean Leaf Coffee Company. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="about us.js"></script>
+    </body>
+</html>
